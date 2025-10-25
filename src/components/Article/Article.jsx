@@ -3,8 +3,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import CarouselLayout from '@/layouts/CarouselLayout'
 import { FaArrowRight } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 const Article = () => {
+    const navigate = useNavigate()
+
     return (
         <section id='article' className='pt-12 sm:pt-16 md:pt-20 pb-12 bg-gradient-to-b from-sky-50 to-white'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-10'>
@@ -44,7 +47,7 @@ const Article = () => {
                                     {item.content.slice(0, 190)}...
                                 </p>
                                 <a
-                                    onClick={() => location.replace(`/artikel/${item.slug}`)}
+                                    onClick={() => navigate(`/artikel/${item.slug}`)}
                                     className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-all'
                                 >
                                     Baca Selengkapnya <FaArrowRight className='text-sm mt-0.5' />
