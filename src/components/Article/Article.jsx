@@ -44,7 +44,7 @@ const Article = () => {
                                     {item.content.slice(0, 190)}...
                                 </p>
                                 <a
-                                    href={`/artikel/${item.slug}`}
+                                    onClick={() => location.replace(`/artikel/${item.slug}`)}
                                     className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-all'
                                 >
                                     Baca Selengkapnya <FaArrowRight className='text-sm mt-0.5' />

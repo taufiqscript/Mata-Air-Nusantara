@@ -312,7 +312,7 @@ const Landing = () => {
                     </section>
 
                     {/* CTA */}
-                    <section className="py-16">
+                    <section className="pt-12 sm:pt-16 md:pt-20 pb-12">
                         <div className="max-w-7xl mx-auto px-6">
                             <motion.div
                                 initial="hidden"
