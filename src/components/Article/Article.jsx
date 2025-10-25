@@ -48,7 +48,7 @@ const Article = () => {
                                 </p>
                                 <a
                                     onClick={() => navigate(`/artikel/${item.slug}`)}
-                                    className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-all'
+                                    className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 cursor-pointer font-semibold transition-all'
                                 >
                                     Baca Selengkapnya <FaArrowRight className='text-sm mt-0.5' />
                                 </a>
