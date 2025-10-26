@@ -9,8 +9,6 @@ const CarouselLayout = ({ children }) => {
     const items = React.Children.toArray(children)
     const duplicatedItems = [...items, ...items]
 
-    const [isHover, setIsHover] = useState(false)
-
     useEffect(() => {
         if (ref.current) {
             const middle = ref.current.scrollWidth / 2
@@ -35,32 +33,30 @@ const CarouselLayout = ({ children }) => {
 
     return (
         <motion.div
-            onMouseEnter={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
             className='relative w-full '>
             <div className='absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-white to-transparent pointer-events-none' />
             <div className='absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-white to-transparent pointer-events-none' />
 
             <motion.button
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: isHover ? 1 : 0, x: isHover ? 0 : -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 onClick={() => handleScroll(-scrollAmount)}
-                className={`absolute top-1/2 left-0 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full shadow-md hover:shadow-lg border border-gray-300/60`}
+                className={`absolute top-1/2 left-0 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full z-10 shadow-md hover:shadow-lg border border-gray-300/60`}
             >
                 <GoChevronLeft
-                    className='text-[32px]'
+                    className='md:text-[32px] text-2xl'
                 />
             </motion.button>
             <motion.button
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: isHover ? 1 : 0, x: isHover ? 0 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 onClick={() => handleScroll(scrollAmount)}
-                className={`absolute top-1/2 right-0 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full shadow-md hover:shadow-lg border border-gray-300/60`}
+                className={`absolute top-1/2 right-0 -translate-y-1/2 bg-white/70 hover:bg-white text-black p-2 rounded-full z-10 shadow-md hover:shadow-lg border border-gray-300/60`}
             >
                 <GoChevronRight
-                    className='text-[32px]'
+                    className='md:text-[32px] text-2xl'
                 />
             </motion.button>
 

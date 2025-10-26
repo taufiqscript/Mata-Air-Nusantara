@@ -144,13 +144,21 @@ const Landing = () => {
                     </nav>
 
                     <div
-                        className={`md:hidden transition-all origin-top ${mobileOpen ? "max-h-[300px]" : "max-h-0 overflow-hidden"} bg-white/95 border-t`}
+                        className={`md:hidden transition-all origin-top ${mobileOpen ? "max-h-[370px]" : "max-h-0 overflow-hidden"} bg-white/95 border-t`}
                     >
                         <ul className="flex flex-col gap-3 px-6 py-4 text-lg font-medium">
-                            {["Beranda", "Layanan", "Portofolio", "Kontak"].map((m) => (
-                                <li key={m} className="py-2 border-b last:border-b-0">
+                            {["Beranda", "Layanan", "Portofolio", "Artikel", "Kontak"].map((m, i) => (
+                                <li key={i} className="py-2 border-b last:border-b-0">
+
                                     <a
-                                        href={`#${m.toLowerCase()}`}
+                                        href={
+                                            i === 0 ? '#home' :
+                                                i === 1 ? '#services' :
+                                                    i === 2 ? '#portofolio' :
+                                                        i === 3 ? '#article' :
+                                                            i === 4 ? '#contact' :
+                                                                ''
+                                        }
                                         onClick={() => setMobileOpen(false)}
                                         className="block py-2 text-gray-700 hover:text-blue-600"
                                     >
@@ -218,14 +226,14 @@ const Landing = () => {
                                 <div
                                     className="mt-8 flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start"
                                 >
-                                    <div className="flex items-center gap-3 bg-yellow-300/90 px-4 py-3 rounded-lg w-full sm:w-[220px]">
+                                    <div className="flex items-center justify-center gap-3 bg-yellow-300/90 px-4 py-3 rounded-lg w-full sm:w-[220px]">
                                         <BsFillTelephoneFill className="text-black text-xl" />
                                         <div>
                                             <div className="text-md text-black font-semibold">Hubungi Kami</div>
                                             <div className="font-bold text-md text-black">0858-1957-9801</div>
                                         </div>
                                     </div>
-                                    <div className="text-sm text-white/80 text-center sm:text-left">
+                                    <div className="text-sm text-white/80 text-center sm:text-left pb-2 md:pb-0">
                                         Layanan area : <br />Bekasi, Jakarta, Depok, Tangerang
                                     </div>
                                 </div>
@@ -283,7 +291,7 @@ const Landing = () => {
                     </section>
 
                     {/* MENGAPA MEMILIH KAMI */}
-                    <section className="py-24 bg-gradient-to-b from-sky-50 to-white">
+                    <section className="pt-12 sm:pt-16 md:pt-20 pb-12 bg-gradient-to-b from-sky-50 to-white">
                         <div
                             className="max-w-7xl mx-auto px-6"
                         >
@@ -327,7 +335,7 @@ const Landing = () => {
                                         Estimasi awal tergantung pada kedalaman dan kondisi tanah. Kami menyediakan survei lapangan gratis untuk menentukan biaya final.
                                     </p>
                                 </div>
-                                <div className="flex gap-4">
+                                <div className="flex flex-col md:flex-row gap-2 md:gap-4 w-full md:w-auto text-center md:text-left">
                                     <a
                                         href="https://wa.me/6285819579801"
                                         target="_blank"
@@ -377,7 +385,7 @@ const Landing = () => {
                     <Article />
 
                     {/*TESTIMONIAL*/}
-                    <section className="py-16 bg-sky-50">
+                    <section className="pt-12 sm:pt-16 md:pt-20 pb-12 bg-sky-50">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
@@ -520,9 +528,9 @@ const Landing = () => {
                     href="https://wa.me/6285819579801?text=Halo%20Mata%20Air%20Nusantara,%20saya%20ingin%20memesan%20jasa%20sumur%20bor."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="fixed bottom-6 right-6 z-50">
+                    className="fixed bottom-3 md:bottom-6 right-3 md:right-6 z-50">
                     <div
-                        className="w-16 h-16 rounded-full bg-gradient-to-tr from-green-500 to-emerald-400 shadow-lg flex items-center justify-center text-white text-2xl">
+                        className="w-12 md:w-16 h-12 md:h-16 rounded-full bg-gradient-to-tr from-green-500 to-emerald-400 shadow-lg flex items-center justify-center text-white text-lg md:text-2xl">
                         <FaWhatsapp />
                     </div>
                 </a>
