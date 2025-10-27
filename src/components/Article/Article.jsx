@@ -28,7 +28,7 @@ const Article = () => {
                     {LIST_ARTICLES.map((item, index) => (
                         <div
                             key={index}
-                            className='flex-shrink-0 flex justify-center items-center w-full h-full snap-center'
+                            className='flex-shrink-0 flex justify-center items-center w-full snap-center'
                         >
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
