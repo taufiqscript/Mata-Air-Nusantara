@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go'
 import { motion } from 'framer-motion'
 
 const CarouselLayout = ({ children }) => {
     const ref = useRef()
-    const scrollAmount = 600
+    const scrollAmount = window.innerWidth < 640 ? 300 : 600
 
     const items = React.Children.toArray(children)
     const duplicatedItems = [...items, ...items]

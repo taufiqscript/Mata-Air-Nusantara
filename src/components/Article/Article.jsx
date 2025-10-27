@@ -28,14 +28,14 @@ const Article = () => {
                     {LIST_ARTICLES.map((item, index) => (
                         <div
                             key={index}
-                            className='flex-shrink-0 flex justify-center items-center w-full snap-center'
+                            className='flex-shrink-0 flex justify-center items-center w-full h-full snap-center'
                         >
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }}
                                 exit={{ opacity: 0, scale: 0 }}
-                                className='w-full md:w-[70%] md:h-[70%] bg-white p-10 rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300'>
+                                className='w-full md:w-[70%] md:h-[70%] bg-white p-5 md:p-10 rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300'>
                                 <img
                                     src={item.image}
                                     alt={item.title}
