@@ -2,7 +2,7 @@ export const LIST_ARTICLES = [
     {
         title: "Tips Memilih Jasa Sumur Bor yang Tepat",
         slug: "tips-memilih-jasa-sumur-bor-yang-tepat",
-        image: "/article/article-sumur-bor.png",
+        image: "/article/article-sumur-bor.webp",
         content: `Memilih jasa sumur bor bukan hal yang bisa dilakukan sembarangan. Kualitas pengeboran menentukan seberapa lancar dan bersih air yang kamu dapatkan. 
 Berikut beberapa tips sebelum menentukan pilihan:
 1. Pilih penyedia jasa berpengalaman yang memahami kondisi tanah di wilayahmu.
@@ -16,7 +16,7 @@ Berikut beberapa tips sebelum menentukan pilihan:
     {
         title: "Cara Merawat Pompa Air Agar Awet dan Tidak Mudah Rusak",
         slug: "cara-merawat-pompa-air-agar-awet-dan-tidak-mudah-rusak",
-        image: "/article/article-pompa-air.png",
+        image: "/article/article-pompa-air.webp",
         content: `Pompa air adalah bagian vital dari sistem air rumah tangga. Agar tetap awet, lakukan perawatan rutin:
 1. Gunakan pompa sesuai kapasitasnya.
 2. Periksa tekanan air secara berkala.
@@ -30,7 +30,7 @@ Berikut beberapa tips sebelum menentukan pilihan:
     {
         title: "Ciri-Ciri Air Sumur yang Layak Konsumsi",
         slug: "ciri-ciri-air-sumur-yang-layak-konsumsi",
-        image: "/article/article-air-bersih.png",
+        image: "/article/article-air-bersih.webp",
         content: `Tidak semua air sumur aman diminum. Berikut tanda-tanda air yang baik:
 1. Jernih dan tidak berbau logam atau karat.
 2. Tidak meninggalkan endapan di dasar wadah.

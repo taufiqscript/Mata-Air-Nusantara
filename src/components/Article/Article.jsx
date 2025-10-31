@@ -72,6 +72,7 @@ const Article = () => {
                                 <img
                                     src={item.image}
                                     alt={item.title}
+                                    loading='lazy'
                                     className='w-full h-[50%] object-cover rounded-2xl mb-4 md:mb-6 transition-transform duration-500 ease-out hover:scale-105 hover:shadow-[0_8px_20px_rgba(0,150,255,0.15)]'
                                 />
 
