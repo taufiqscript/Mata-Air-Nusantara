@@ -54,7 +54,7 @@ const Landing = () => {
         <>
             <Helmet>
                 <title>Jasa Bor Air dan Sumur Bor Profesional di Bekasi | Mata Air Nusantara</title>
-                <link rel="canonical" href="https://www.mataairnusantara.com/" />
+                <link rel="canonical" href="https://mataairnusantara.com/" />
 
                 <meta
                     name="description"
@@ -73,8 +73,8 @@ const Landing = () => {
                     property="og:description"
                     content="Jasa bor air dan sumur bor terpercaya untuk wilayah Bekasi, Jakarta, Depok, Tangerang, dan sekitarnya. Konsultasi & survei gratis!"
                 />
-                <meta property="og:url" content="https://www.mataairnusantara.com/" />
-                <meta property="og:image" content="https://www.mataairnusantara.com/logo.webp" />
+                <meta property="og:url" content="https://mataairnusantara.com/" />
+                <meta property="og:image" content="https://mataairnusantara.com/logo.webp" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Jasa Bor Air & Sumur Bor Profesional | Mata Air Nusantara" />
@@ -82,14 +82,14 @@ const Landing = () => {
                     name="twitter:description"
                     content="Mata Air Nusantara melayani jasa bor air dan sumur bor profesional di Bekasi & sekitarnya. Survei gratis, hasil dijamin!"
                 />
-                <meta name="twitter:image" content="https://www.mataairnusantara.com/logo.webp" />
+                <meta name="twitter:image" content="https://mataairnusantara.com/logo.webp" />
 
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "LocalBusiness",
                         "name": "Mata Air Nusantara",
-                        "image": "https://www.mataairnusantara.com/logo.webp",
+                        "image": "https://mataairnusantara.com/logo.webp",
                         "telephone": "+6285819579801",
                         "priceRange": "Rp200.000 - Rp5.000.000",
                         "address": {
@@ -105,7 +105,7 @@ const Landing = () => {
                             "latitude": -6.30650016,
                             "longitude": 106.93286036
                         },
-                        "url": "https://www.mataairnusantara.com",
+                        "url": "https://mataairnusantara.com",
                         "areaServed": ["Bekasi", "Jakarta", "Depok", "Tangerang", "Bogor"],
                         "openingHours": "Mo-Su 00:00-23:59"
                     })}
