@@ -78,6 +78,7 @@ const Portofolio = () => {
                         <img
                             src={modal.src}
                             alt={modal.caption}
+                            loading='lazy'
                             className='w-full h-auto object-contain max-h-[80vh]'
                         />
                         <div className='p-4 flex justify-between items-center'>

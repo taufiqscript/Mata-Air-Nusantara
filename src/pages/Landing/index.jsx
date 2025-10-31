@@ -53,46 +53,61 @@ const Landing = () => {
     return (
         <>
             <Helmet>
-                <title>Mata Air Nusantara | Jasa Sumur Bor Bekasi & Jabodetabek</title>
+                <title>Jasa Bor Air dan Sumur Bor Profesional di Bekasi | Mata Air Nusantara</title>
+                <link rel="canonical" href="https://www.mataairnusantara.com/" />
+
                 <meta
                     name="description"
-                    content="Jasa sumur bor profesional area Bekasi, Jakarta, Depok, Tangerang, dan sekitarnya. Air bersih, hasil terjamin, survei gratis!"
+                    content="Mata Air Nusantara melayani jasa bor air dan sumur bor terdekat di Bekasi, Jakarta, Depok, Tangerang, dan sekitarnya. Tim profesional, hasil dijamin, survei & konsultasi gratis!"
                 />
                 <meta
                     name="keywords"
-                    content="sumur bor bekasi, jasa sumur bor, pengeboran air, pompa air rumah, mata air nusantara"
+                    content="jasa bor air, jasa sumur bor, jasa bor air terdekat, jasa pengeboran air, jasa pengeboran air bersih, jasa sumur bor Bekasi, Mata Air Nusantara"
                 />
-                <meta property="og:title" content="Mata Air Nusantara – Jasa Sumur Bor Profesional" />
+                <meta name="author" content="Mata Air Nusantara" />
+                <meta name="robots" content="index, follow" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Jasa Bor Air & Sumur Bor Profesional di Bekasi | Mata Air Nusantara" />
                 <meta
                     property="og:description"
-                    content="Solusi pengeboran air bersih & profesional untuk rumah dan industri. Garansi hasil dan survei gratis."
+                    content="Jasa bor air dan sumur bor terpercaya untuk wilayah Bekasi, Jakarta, Depok, Tangerang, dan sekitarnya. Konsultasi & survei gratis!"
                 />
-                <meta property="og:image" content="/Mata Air Nusantara Logo.png" />
-                <meta property="og:url" content="https://mataairnusantara.com" />
+                <meta property="og:url" content="https://www.mataairnusantara.com/" />
+                <meta property="og:image" content="https://www.mataairnusantara.com/logo.webp" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Jasa Bor Air & Sumur Bor Profesional | Mata Air Nusantara" />
+                <meta
+                    name="twitter:description"
+                    content="Mata Air Nusantara melayani jasa bor air dan sumur bor profesional di Bekasi & sekitarnya. Survei gratis, hasil dijamin!"
+                />
+                <meta name="twitter:image" content="https://www.mataairnusantara.com/logo.webp" />
 
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "LocalBusiness",
                         "name": "Mata Air Nusantara",
-                        "image": "https://mataairnusantara.com/logo.png",
+                        "image": "https://www.mataairnusantara.com/logo.webp",
                         "telephone": "+6285819579801",
+                        "priceRange": "Rp200.000 - Rp5.000.000",
                         "address": {
                             "@type": "PostalAddress",
                             "streetAddress": "Jl. Masjid Ps. Kecapi Gg. Masjid 06 No.68A",
                             "addressLocality": "Jatiwarna, Pondok Melati",
                             "addressRegion": "Kota Bekasi",
                             "postalCode": "17415",
-                            "addressCountry": "ID",
+                            "addressCountry": "ID"
                         },
                         "geo": {
                             "@type": "GeoCoordinates",
                             "latitude": -6.30650016,
-                            "longitude": 106.93286036,
+                            "longitude": 106.93286036
                         },
-                        "url": "https://mataairnusantara.com",
+                        "url": "https://www.mataairnusantara.com",
                         "areaServed": ["Bekasi", "Jakarta", "Depok", "Tangerang", "Bogor"],
-                        "openingHours": "Mo-Su 00:00-23:59",
+                        "openingHours": "Mo-Su 00:00-23:59"
                     })}
                 </script>
             </Helmet>
@@ -110,8 +125,9 @@ const Landing = () => {
                     <nav className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 flex justify-between items-center">
                         <div className="flex items-center gap-6 sm:gap-8">
                             <img
-                                src="/Mata Air Nusantara Logo.png"
+                                src="/Mata Air Nusantara Logo.webp"
                                 alt="Logo"
+                                loading="lazy"
                                 onClick={() => location.replace('/')}
                                 className="h-12 sm:h-14 md:h-18 w-auto object-contain hover:scale-105 cursor-pointer transition-transform"
                             />
@@ -184,7 +200,7 @@ const Landing = () => {
                             </g>
                         </svg>
 
-                        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 w-full flex flex-col-reverse lg:flex-row items-center gap-10">
+                        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-4 w-full flex flex-col-reverse lg:flex-row items-center gap-10">
                             <motion.div
                                 initial="hidden"
                                 whileInView="visible"
@@ -195,13 +211,14 @@ const Landing = () => {
                                 <h1
                                     className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-yellow-300 drop-shadow-lg leading-tight"
                                 >
-                                    Solusi Pengeboran Air Profesional & Andal
+                                    Jasa Bor Air dan Sumur Bor Profesional di Bekasi & Jabodetabek
                                 </h1>
                                 <p
                                     className="text-white/90 text-base sm:text-lg mt-4 max-w-xl mx-auto lg:mx-0 leading-relaxed"
                                     variants={fadeUp}
                                 >
-                                    Mata Air Nusantara menggabungkan pengalaman lapangan dan peralatan modern untuk memastikan sumur bor yang bersih, aman, dan tahan lama — khususnya untuk area Jakarta & sekitarnya.
+                                    Kami melayani jasa pengeboran air bersih untuk rumah, kantor, pabrik, dan gedung.
+                                    Tim kami berpengalaman menangani berbagai proyek sumur bor di wilayah Bekasi, Jakarta, Depok, dan sekitarnya.
                                 </p>
 
                                 <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -251,8 +268,9 @@ const Landing = () => {
                                     className="max-w-xs sm:max-w-md lg:max-w-xl w-full"
                                 >
                                     <img
-                                        src="/people.png"
+                                        src="/people.webp"
                                         alt="Tim Profesional"
+                                        loading="lazy"
                                         className="w-full object-contain drop-shadow-lg"
                                     />
                                 </motion.div>
@@ -281,7 +299,7 @@ const Landing = () => {
                                         whileInView="visible"
                                         className="bg-gradient-to-tr from-white to-sky-50 border border-gray-100 p-6 rounded-2xl shadow-sm max-w-sm mx-auto"
                                     >
-                                        <img src={item.img} alt={item.title} className="w-14 h-14 sm:w-16 sm:h-16 mb-4 mx-auto lg:mx-0" />
+                                        <img src={item.img} alt={item.title} loading="lazy" className="w-14 h-14 sm:w-16 sm:h-16 mb-4 mx-auto lg:mx-0" />
                                         <h4 className="font-semibold text-lg text-gray-800 text-center lg:text-left">{item.title}</h4>
                                         <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed text-center lg:text-left">{item.desc}</p>
                                     </motion.div>
@@ -310,7 +328,7 @@ const Landing = () => {
                                         variants={fadeUp}
                                         className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center"
                                     >
-                                        <img src={item.img} alt={item.title} className="w-16 h-16 mx-auto mb-4" />
+                                        <img src={item.img} alt={item.title} loading="lazy" className="w-16 h-16 mx-auto mb-4" />
                                         <h5 className="font-semibold">{item.title}</h5>
                                         <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
                                     </motion.div>

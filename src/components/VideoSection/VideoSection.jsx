@@ -1,11 +1,41 @@
 import React from 'react'
 import { LIST_VIDEOS } from '@/constans/listVideos'
 import { motion } from 'framer-motion'
+import LiteYoutubeEmbed from 'react-lite-youtube-embed'
+import { Helmet } from 'react-helmet'
 
 
 const VideoSection = () => {
     return (
         <section id="video" className="pt-12 sm:pt-16 md:pt-20 pb-12 bg-gradient-to-b from-white to-sky-50">
+
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        "itemListElement": LIST_VIDEOS.map((v, index) => ({
+                            "@type": "VideoObject",
+                            "position": index + 1,
+                            "name": v.title,
+                            "description": v.desc,
+                            "thumbnailUrl": `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`,
+                            "uploadDate": "2025-10-01", // bisa disesuaikan per video
+                            "contentUrl": `https://www.youtube.com/watch?v=${v.youtubeId}`,
+                            "embedUrl": `https://www.youtube.com/embed/${v.youtubeId}`,
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Mata Air Nusantara",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://mataairnusantara.com/logo.png"
+                                }
+                            }
+                        }))
+                    })}
+                </script>
+            </Helmet>
+
             <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -27,10 +57,10 @@ const VideoSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {LIST_VIDEOS.map((v, i) => (
                         <div key={i} className="rounded-2xl border overflow-hidden shadow-sm bg-white">
-                            <video
-                                src={v.src}
-                                controls
-                                className="w-full object-cover rounded-t-2xl"
+                            <LiteYoutubeEmbed
+                                id={v.youtubeId}
+                                title={v.title}
+                                poster='hqdefault'
                             />
                             <div className="p-4 text-center text-sm sm:text-base">
                                 <h4 className="font-semibold text-gray-800">{v.title}</h4>

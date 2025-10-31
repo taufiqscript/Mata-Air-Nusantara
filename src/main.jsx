@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Landing from './pages/Landing/index.jsx'
 import ArticleDetail from './pages/ArticleDetail'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const route = createBrowserRouter([
   { path: '/', element: <Landing /> },

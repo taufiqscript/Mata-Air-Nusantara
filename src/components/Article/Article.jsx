@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import CarouselLayout from '@/layouts/CarouselLayout'
 import { FaArrowRight } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const Article = () => {
     const navigate = useNavigate()
@@ -12,6 +13,38 @@ const Article = () => {
 
     return (
         <section id='article' className='pt-12 sm:pt-16 md:pt-20 pb-12 bg-gradient-to-b from-sky-50 to-white'>
+
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        "name": "Artikel & Seputar Air Bersih",
+                        "itemListElement": LIST_ARTICLES.map((item, index) => ({
+                            "@type": "BlogPosting",
+                            "position": index + 1,
+                            "headline": item.title,
+                            "description": item.content.slice(0, 160),
+                            "image": item.image,
+                            "url": `https://mataairnusantara.com/artikel/${item.slug}`,
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Mata Air Nusantara"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Mata Air Nusantara",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://mataairnusantara.com/logo.png"
+                                }
+                            },
+                            "datePublished": "2025-10-01"
+                        }))
+                    })}
+                </script>
+            </Helmet>
+
             <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-10'>
                 <motion.h3
                     initial={{ opacity: 0, y: 20 }}
